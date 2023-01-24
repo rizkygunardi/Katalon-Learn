@@ -19,23 +19,12 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startApplication('/Users/rizky/Katalon Studio/Eduwork/Mobile Apps/Happy Day Shopping.apk', true)
 
-Mobile.tap(findTestObject('Object Repository/FlashSale/View FlashSale'), 0)
+Mobile.tap(findTestObject('Object Repository/About/android.view.ViewGroup'), 0)
 
-Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
+Mobile.scrollToText('Were just a message away!')
 
-Mobile.tap(findTestObject('Object Repository/FlashSale/View Product'), 0)
-
-Mobile.setText(findTestObject('Object Repository/FlashSale/Add Product'), '5', 0)
-
-Mobile.tap(findTestObject('Object Repository/FlashSale/button - Buy Product'), 0)
-
-Mobile.tap(findTestObject('Object Repository/FlashSale/button - Cast'), 0)
-
-Mobile.tap(findTestObject('Object Repository/FlashSale/button - Checkout'), 0)
-
-Mobile.scrollToText('Download our App', FailureHandling.STOP_ON_FAILURE)
-
-Mobile.getText(findTestObject('FlashSale/android.view.View - Download our App'), 0)
+Mobile.getText(findTestObject('Object Repository/About/android.widget.TextView - Looking for even more products Were just a message away'), 
+    0)
 
 Mobile.closeApplication()
 
